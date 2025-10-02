@@ -5,7 +5,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import streams.datasource.Student;
+import streams.datasource.generate.ListOfModels;
+import streams.datasource.model.Student;
 
 public class GeneratorsConsumers {
 	
@@ -40,7 +41,7 @@ public class GeneratorsConsumers {
 	}
 	
 	public static void collectionStream() {
-		List<Student> studentsList = Student.getStudents();
+		List<Student> studentsList = ListOfModels.getStudents();
 		
 		//stream of student
 		Stream<Student> studentsStream = studentsList.stream();

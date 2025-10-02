@@ -1,26 +1,13 @@
-package streams.datasource;
+package streams.datasource.generate;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
-    int id;
-    String name;
-    int age;
-    double termFee;
-    double paidFee;
-    int attendance;
+import streams.datasource.model.*;
 
-    public Student(int id, String name, int age, double termFee, double paidFee, int attendance) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.termFee = termFee;
-        this.paidFee = paidFee;
-        this.attendance = attendance;
-    }
-    
-    public static List<Student> getStudents(){
+public class ListOfModels {
+
+	public static List<Student> getStudents(){
     	List<Student> students = new ArrayList<>();
     	students.add(new Student(1, "Aarav", 19, 43207.72, 69712.49, 85));
         students.add(new Student(2, "Vivaan", 25, 46105.09, 69359.86, 80));
@@ -44,22 +31,16 @@ public class Student {
         students.add(new Student(20, "Yuvraj", 24, 59999.99, 51222.88, 70));
         students.add(new Student(21, "Reyansh", 22, 71222.30, 69111.20, 92));
         students.add(new Student(22, "Harsh", 20, 49000.80, 45555.40, 87));
-        students.add(new Student(23, "Manav", 21, 50111.25, 38900.75, 66));
+        students.add(new Student(23, "Manav", 21, 50111.25, 50111.25, 66));
         students.add(new Student(24, "Siddharth", 25, 78000.00, 75222.10, 93));
         students.add(new Student(25, "Om", 18, 47000.60, 39888.40, 61));
         students.add(new Student(26, "Raghav", 19, 59000.33, 50012.11, 75));
         students.add(new Student(27, "Pranav", 22, 61000.44, 42222.55, 89));
         students.add(new Student(28, "Laksh", 23, 70012.22, 50012.99, 78));
         students.add(new Student(29, "Tejas", 20, 64888.10, 47888.20, 82));
-        students.add(new Student(30, "Mihir", 21, 69999.99, 65555.55, 96));
+        students.add(new Student(30, "Mihir", 21, 69999.99, 69999.99, 96));
         return students;
     }
 
-    @Override
-    public String toString() {
-        return id + " - " + name + " | Age: " + age +
-               " | Term Fee: " + termFee +
-               " | Paid Fee: " + paidFee +
-               " | Attendance: " + attendance + "%";
-    }
+	
 }
