@@ -5,8 +5,8 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import streams.datasource.generate.ListOfModels;
-import streams.datasource.model.Student;
+import datasource.generate.ListOfModels;
+import datasource.model.Student;
 
 public class GeneratorsConsumers {
 	

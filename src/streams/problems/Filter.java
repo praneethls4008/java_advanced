@@ -1,11 +1,13 @@
 package streams.problems;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import streams.datasource.generate.ListOfModels;
-import streams.datasource.model.Student;
+import datasource.generate.ListOfModels;
+import datasource.model.Student;
 
 public class Filter {
 	
@@ -18,9 +20,26 @@ public class Filter {
 			.forEach(student -> System.out.print(student.getName() + ", "));
 	}
 	
+	public static void problem2() {
+		record StudentFiltered(int id, String name, int age) {};
+		
+		System.out.print("\n groupby Student age");
+		Map<Integer, List<StudentFiltered>> groupedBy = ListOfModels.getStudents()
+			.stream()
+			.map(student -> {
+				return new StudentFiltered(student.getId(), student.getName(), student.getAge());
+			})
+			.collect(Collectors.groupingBy(StudentFiltered::age));
+		System.out.print(groupedBy);
+		
+		
+		
+	}
+	
 	
 	
 	public static void main(String[] args) {
 		problem1();
+		problem2();
 	}
 }

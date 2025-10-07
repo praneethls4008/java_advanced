@@ -1,8 +1,6 @@
 package streams;
 
-import java.util.Collections;
-
-import streams.datasource.generate.ListOfModels;
+import datasource.generate.ListOfModels;
 
 /*
  * 

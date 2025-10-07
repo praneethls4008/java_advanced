@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import streams.datasource.generate.ListOfModels;
-import streams.datasource.model.Student;
+import datasource.generate.ListOfModels;
+import datasource.model.Student;
 
 /*
  * 

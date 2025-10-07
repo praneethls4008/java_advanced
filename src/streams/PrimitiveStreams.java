@@ -1,16 +1,14 @@
 package streams;
 
-import java.util.Optional;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
-import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
-import streams.datasource.generate.ListOfModels;
-import streams.datasource.model.Student;
+import datasource.generate.ListOfModels;
+import datasource.model.Student;
 
 
 /*

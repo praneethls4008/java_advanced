@@ -1,4 +1,4 @@
-package streams.datasource.model;
+package datasource.model;
 
 import java.util.ArrayList;
 import java.util.List;
