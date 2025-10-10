@@ -3,6 +3,7 @@ package datasource.generate;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,12 +13,12 @@ public class ListOfModels {
 
 	public static List<Student> getStudents(){
     	List<Student> students = new ArrayList<>();
-    	students.add(new Student(1, "Aarav", 19, 43207.72, 69712.49, 85));
-        students.add(new Student(2, "Vivaan", 25, 46105.09, 69359.86, 80));
-        students.add(new Student(3, "Aditya", 18, 44325.82, 65966.39, 88));
-        students.add(new Student(4, "Vihaan", 23, 44010.11, 62117.41, 73));
-        students.add(new Student(5, "Arjun", 24, 59307.02, 71899.64, 57));
-        students.add(new Student(6, "Sai", 22, 49763.56, 70123.11, 91));
+    	students.add(new Student(1, "Aarav", 19, 69712.49, 43207.72,  85));
+        students.add(new Student(2, "Vivaan", 25, 69359.86, 46105.09,  80));
+        students.add(new Student(3, "Aditya", 18, 65966.39, 44325.82,  88));
+        students.add(new Student(4, "Vihaan", 23, 62117.41, 44010.11,  73));
+        students.add(new Student(5, "Arjun", 24, 71899.64, 59307.02,  57));
+        students.add(new Student(6, "Sai", 22, 70123.11, 49763.56,  91));
         students.add(new Student(7, "Krishna", 20, 73829.44, 68192.33, 76));
         students.add(new Student(8, "Ishaan", 21, 68901.77, 63245.12, 83));
         students.add(new Student(9, "Rohan", 25, 72566.89, 53422.45, 64));
@@ -156,18 +157,20 @@ public class ListOfModels {
         Item i10 = new Item(10, "Camera", 900);
 
         // Create Orders with different dates
-        Order o1 = new Order(1, LocalDate.now().minusDays(2), Arrays.asList(i1, i2));
-        Order o2 = new Order(2, LocalDate.now().minusDays(5), Arrays.asList(i3, i4, i5));
-        Order o3 = new Order(3, LocalDate.now().minusDays(10), Arrays.asList(i6, i7));  // older than 7 days
-        Order o4 = new Order(4, LocalDate.now().minusDays(1), Arrays.asList(i8, i9, i10));
-        Order o5 = new Order(5, LocalDate.now().minusDays(3), Arrays.asList(i3, i7));
+        Order o1 = new Order(1, LocalDate.of(2025, 9, 29), Arrays.asList(i1, i2));
+        Order o2 = new Order(2, LocalDate.of(2024, 2, 5), Arrays.asList(i3, i4, i5));
+        Order o3 = new Order(3, LocalDate.of(2025, 9, 29), Arrays.asList(i1, i2, i3, i4, i5, i6, i7));  // older than 7 days
+        Order o4 = new Order(4, LocalDate.of(2025, 8, 12), Arrays.asList(i8, i9, i10));
+        Order o5 = new Order(5, LocalDate.of(2024, 5, 16), Arrays.asList(i3, i7));
+        Order o6 = new Order(6, LocalDate.of(2025, 4, 17), Arrays.asList(i3, i7));
 
         // Create Customers with Orders
         Customer c1 = new Customer(1, "Alice", Arrays.asList(o1, o2));
         Customer c2 = new Customer(2, "Bob", Arrays.asList(o3));
         Customer c3 = new Customer(3, "Charlie", Arrays.asList(o4, o5));
+        Customer c4 = new Customer(4, "Alon", Arrays.asList(o6));
 
-        return Arrays.asList(c1, c2, c3);
+        return Arrays.asList(c1, c2, c3, c4);
 	}
 	
 }
